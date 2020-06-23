@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+* {
+  font-family: "Baloo 2", cursive;
+}
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background: #333;
+}
+h1 {
+  color: #e0f6af;
+  text-align: center;
+  padding: 1vh;
+  z-index: 10;
+}
+.container {
+  max-width: 95%;
+  margin: auto;
+  position: relative;
+  z-index: 10;
+}
+h2 {
+  position: absolute;
+  top: 72%;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 2em;
+  z-index: 20;
+  writing-mode: horizontal-tb;
+}
+.sombra {
+  position: relative;
+  width: 4.5em;
+  height: 0.8em;
+  background: #e0f6af;
+  margin: 5px auto;
+  margin-bottom: 0;
+  padding: 0;
+  top: 0%;
+  left: 0%;
+  border-radius: 30px;
+}
+.sombra::before {
+  content: "";
+  position: absolute;
+  top: 2800%;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  width: 3.3em;
+  height: 0.8em;
+  margin: 10px;
+  border-radius: 50%;
+}
+.botella {
+  margin-top: 6.25em;
+}
+.box {
+  position: relative;
+  width: 3.75em;
+  height: 21.87em;
+  margin: 0 auto;
+  margin-top: 0;
+  padding: 0;
+  border-radius: 0 0 3.75em 3.75em;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1em;
+  text-align: right;
+  writing-mode: vertical-rl;
+}
+.box::after {
+  content: "";
+  position: absolute;
+  bottom: 90%;
+  left: 55%;
+  background: #e0f6af;
+  width: 23.125em;
+  height: 18.125em;
+  border-radius: 30%;
+  box-sizing: border-box;
+  transform: translateX(-50%) rotate(0);
+  animation: wave 10s linear infinite;
+}
+.box::before {
+  content: "";
+  position: absolute;
+  width: 470px;
+  height: 390px;
+  bottom: 90%;
+  left: 55%;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  box-sizing: border-box;
+  transform: translateX(-50%) rotate(0);
+  animation: wave 10s linear infinite;
+}
+.bobble {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  top: 50%;
+  left: -10%;
+  width: 20px;
+  height: 5px;
+  border-radius: 10px;
+}
+.bobble::before {
+  content: "";
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  top: 800%;
+  left: 0;
+  width: 20px;
+  height: 5px;
+  border-radius: 10px;
+}
+.bobble::after {
+  content: "";
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  top: -800%;
+  left: 0;
+  width: 20px;
+  height: 5px;
+  border-radius: 10px;
+}
+.box.a {
+  background: linear-gradient(107deg, #ba2913, #f0bcb4);
+  background-size: 600% 600%;
+  animation: gradientBackground 5s ease infinite;
+}
+.box.a:hover {
+  background: linear-gradient(107deg, #ba2913, #f0bcb4);
+}
+@keyframes wave {
+  50% {
+    transform: reanslatex(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
